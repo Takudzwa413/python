@@ -1,0 +1,130 @@
+try:
+    import random
+    import datetime
+    import unittest
+     #takudzwa vengai
+     #class 2
+     
+
+    print("--------------------------------WELCOME TO PAARL LOTTORY----------------------------------------------\n")
+
+    UserName = str(input("Please Enter Your Name\n"))
+    Age=int(input("Please Enter Your Age\n"))
+
+
+    def game_entrance(age):  # defining function called game_entrance with age as parameter
+        if age < 18:  # 1st condition
+            print("NOT FOR THE PERSON UNDER THE AGE OF 18.")  # result if 1st condition applies
+            exit()
+        else:
+            print("!")  # result if 1st condition does not apply
+    print("YOU CAN CONTINUE GOODLUCK")
+    #an empty list to store random numbers
+    lottoNumbers = []
+    for i in range(0,6):
+        number =random.randint(1,49)
+
+        #checking if you have picked the number once so that you wont pick 2 numbers
+        while number in lottoNumbers:
+            number = random.randint(1,49)
+
+        # appending the unique number to the list
+        lottoNumbers.append(number)
+
+    # sorting the list in ascending order
+    lottoNumbers.sort()
+
+
+    #the user enters the lotto numnbers and get stored in a list
+    UserNumber=[]
+    for i in range(0,6):
+        number = int(input("Enter Your Lotto Numbers\n"))
+        while number<1 or number>49:
+            number = int(input("Try again Enter Your Lotto Numbers betwean 1 to 50\n"))
+        UserNumber.append(number)
+
+    UserNumber.sort()
+
+      #printing the outputs
+    print(">>today lottory numbers are")
+    print(lottoNumbers)
+    print(">>Your Lotto Numbers")
+    print(UserNumber)
+
+     #checking the number(s) that are found in both
+    counter=0
+    for number in UserNumber:
+        if number in lottoNumbers:
+            counter +=1
+
+    print("you have guessed---" + str(counter) +"---number(s) correctly")
+     #this is for date
+    now = datetime.datetime.now()
+    print("Todays Date is", now.strftime("%y %m %d"))
+
+    # this is for the receipt
+    myfile = open("Receipt.txt", "wt")
+    myfile.write(
+        "-------------------------------------------------------------------------------------\n")
+    myfile.write("Current Date\t\t\t\tCounter\t\t\t\t\tAge\n")
+    myfile.write(
+        "--------------------------------------------------------------------------------------\n")
+
+    myfile.write(str(now))
+    myfile.write("\t\t" + str(counter))
+    myfile.write("\t\t\t\t\t" + str(Age))
+    myfile.write("\n")
+
+
+    myfile.write("------------------------CHECK THE COUNTER FOR YOUR WINNINGS------------------------\n")
+    myfile.write(str("Counter6=R10000000\n"))
+    myfile.write(str("Counter5=R8584\n"))
+    myfile.write(str("Counter4=R2384\n"))
+    myfile.write(str("Counter3=R100.50\n"))
+    myfile.write(str("Counter2=20\n"))
+    myfile.write(str( "Counter1=None\n"))
+    myfile.write(str("Counter0=None\n"))
+
+    myfile.write("------------------------------------------------------------------------------------\n")
+
+    myfile.close()
+
+
+
+    while True:
+        if counter==6:
+            print("you won 10 000 000")
+            break
+
+        elif counter==5:
+            print ("you won 8,584 ")
+            break
+
+        elif counter ==4:
+            print (" you won 2,384.00")
+            break
+
+        elif counter==3:
+            print("you won 100.50")
+            break
+
+        elif counter==2:
+            print("you won 20")
+            break
+
+        else:
+            print("you didnt won")
+            break
+
+    print("------------------------------------------------THE END Click Run to Play Again-----------------------------------------------------------")
+   #erros
+except TypeError:
+    print('Type Error')
+except ValueError:
+    print('Value Error')
+except KeyboardInterrupt:
+    print('Keyboard Interrupt')
+except EOFError:
+    print('EOFError')
+except NameError:
+    print("Name Error")

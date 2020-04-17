@@ -1,0 +1,23 @@
+try:
+    import math
+
+
+    def sqrt_of_sum(num1, num2):
+        sqrt = (int(num1 + num2)) ** 2
+        return (sqrt)
+
+
+    num1 = int(input("please enter number:\n"))
+    num2 = int(input("please enter number:\n"))
+
+    results=math.sqrt(sqrt_of_sum(num1,num2))
+    print(results)
+except TypeError:
+    print('error 2')
+except ValueError:
+    print('error3')
+except KeyboardInterrupt:
+    print('error4')
+except EOFError:
+    print('error5')
+

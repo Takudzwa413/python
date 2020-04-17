@@ -1,0 +1,26 @@
+# Adds two numbers
+def add(self, x, y):
+    return x + y
+# Subtracts two numbers
+def subtract(self, x, y):
+    return x - y
+# Divides two numbers
+def divide(self, x, y):
+    return x / y
+# multiply two numbers
+def multiply(self, x, y):
+    return x * y
+
+
+first testing
+
+C:\Users\User\PycharmProjects\unit-test>py -m doctest -v calculator.py
+5 items had no tests:
+    calculator
+    calculator.add
+    calculator.divide
+    calculator.multiply
+    calculator.subtract
+0 tests in 5 items.
+0 passed and 0 failed.
+Test passed.

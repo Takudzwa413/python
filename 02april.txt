@@ -1,0 +1,14 @@
+def tok():
+    count = 0
+    t=open("02=04.py", "r+")
+    y=t.readlines()
+    for line in y:
+           line=line.partition("#")[0]
+           line=line.rstrip()
+           if line.strip():
+               count+=1
+               print(line)
+               t.close()
+    print(count)
+
+tok()

@@ -1,0 +1,15 @@
+
+marks=[]
+for i in range(10):
+    marks.append(int(input()))
+
+def array(arr): #defining function called array with arr as parameter
+  return sum(arr) #returning the sum of array
+print("The sum is", array(marks)) #displaying the sum of the marks
+def cal_average(x): #defining function called cal_average with x as parameter
+  cal_average = array(marks)/10 #method to calculate mark average
+  return cal_average
+print("The average is", cal_average(marks)) #displaying the average of the marks
+print(marks)
+
+

@@ -1,0 +1,94 @@
+Takudzwa vengai day 9 exercise
+***************task1**************************
+
+
+import random
+randomNumber = random.randrange(1,100)
+print("Random numbers have been generated")
+guessed = 3
+numGusses =guessed + 1
+while True:
+    try:
+        user_input = int(input("Your guess please:\n "))
+    except ValueError:
+        print("Please enter a number")
+        continue
+    if user_input == randomNumber:
+        print("You win")
+        break
+    elif user_input < 1 or user_input > 100:
+        print("Our guess range is between 0 and 100, please try again")
+        numGusses= guessed+1
+    elif user_input < randomNumber:
+        print("Try one more time, your number is lower")
+        numGusses=guessed+1
+    elif user_input > randomNumber:
+        print("Try one more time, your number is higher")
+        numGusses=guessed+1
+
+print("end of game")
+
+
+***************task2*********************************
+
+
+
+stdName=str(input("Enter your name \n"))
+stdSname=str(input("Enter your Surname \n"))
+mark1=int(input("enter mark1 \n"))
+mark2=int(input("enter mark2 \n"))
+mark3=int(input("enter mark3\n"))
+sum=float(mark1+mark2+mark3)
+print(sum)
+if sum<50:
+    print("fail")
+elif sum>=50:
+    print("pass")
+else:
+    print("bye")
+
+import datetime
+def every_14_days(dates):
+    print('starting Date:{d}'.format(d=dates))
+    print("every date for the next 2 weeks:")
+    for _ in range(10):
+        date=dates+datetime.timedelta(days=14)
+        print('{d}'.format(d=date))
+
+dt = datetime.date(2020,3,20)
+every_14_days(dt)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+petNames=['Danny Boy',"Georgy Girl","Satchi","Bullet","Miss Daisy","Guffy","Lady","Tinky","Elenor","Tiger","Master","Abigail","Queen","Trevor","Snuffels"]
+print(petNames)
+petNames.sort()
+print(petNames)

@@ -1,0 +1,35 @@
+
+class clsTicketSales:
+    def __init__(self,cell_number,ticket_price,tickets_category):
+        self.cell_number=cell_number
+        self.ticket_price=ticket_price
+        self.number_of_tickets=tickets_category
+cell_number=int(input("enter cell number:"))
+tickets_category=str(input("enter the category "))
+number_of_tickets=int(input("enter number of tickets:"))
+def calPayment():
+    if tickets_category=="soccer":
+        amount_payable=number_of_tickets*40+0,15
+        return amount_payable
+    elif tickets_category=="movie":
+        amount_payable = number_of_tickets * 75 + 0, 15
+        return amount_payable
+    elif tickets_category=="theatre":
+        amount_payable = number_of_tickets * 100 + 0, 15
+        return amount_payable
+
+print("Amount Payable",calPayment())
+print("Reservation  for",tickets_category,"for",number_of_tickets,"tickets")
+print("Was done by",cell_number)
+
+
+
+
+
+
+
+
+
+
+
+

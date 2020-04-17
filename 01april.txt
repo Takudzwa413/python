@@ -1,0 +1,11 @@
+sample=int(input("please enter the first number:\n"))
+sample2=int(input("please enter the second number:\n"))
+sum=sample+sample2
+quotient=sample//sample2
+diffrence=sample-sample2
+product=sample*sample2
+
+print("This is the sum",sum)
+print("This is the Quotient",quotient)
+print("This is the Diffrence",diffrence)
+print("This is the Product",product)

@@ -1,0 +1,41 @@
+Task 1- Takudzwa vengai
+
+
+def hotel_price(nights):
+    hotel_cost = nights * 140
+    return hotel_cost
+
+city1 = "CapeTown"
+cost1 = 2500
+city2 = "Durban"
+cost2 = 2300
+city3 = "JHB"
+cost3 = 2000
+city4 = "BFN"
+cost = 1800
+def plane_ride_cost (city ,cost):
+    print(city, " ")
+    print(cost)
+
+def rental_car_cost(days):
+    cost = 40 * num_of_days
+    if days >= 7:
+        discount1_cost= cost -50
+        print(discount1_cost)
+    elif days >= 3:
+        discount2_cost = cost - 20
+        print(discount2_cost)
+    else:
+        return cost
+
+def trip_cost(city, days, spending_cost):
+    total_cost = rental_car_cost(days) + hotel_cost(days) + plane_ride_cost(city)
+    return total_cost + spending_cost
+
+
+
+
+
+
+
+

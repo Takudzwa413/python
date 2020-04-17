@@ -1,0 +1,20 @@
+def average(one,two,three):
+  avg = (int(one) + int(two) + int(three))//3
+  return (avg)
+one=int(input("enter the first number ;\n"))
+two=int(input("enter the second number\n"))
+three=int(input("enter the third number\n"))
+print("Average\n",average(one,two,three))
+if average(one,two,three)>=50:
+    print("pass",)
+else:
+    print("fail",)
+
+
+
+2 items had no tests:
+    mask
+    mask.average
+0 tests in 2 items.
+0 passed and 0 failed.
+Test passed.

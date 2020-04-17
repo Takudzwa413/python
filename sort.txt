@@ -1,0 +1,11 @@
+
+petNames = ["Danny Boy","Georgy Girl","Satchi","Bullet","Miss Daisy","Guffy","Lady","Tinky","Eleonor","Tiger","Master","Abigail","Queen","Trevor","Snuffels"]
+for i in range(len(petNames)) :
+    min_index = i
+    for j in range(i+1,len(petNames)):
+        if petNames[min_index] > petNames[j]:
+            min_idx = j
+    petNames[i],petNames[min_index] = petNames[min_index],petNames[i]
+print ("sorted list")
+for i in range(len(petNames)) :
+    print(petNames[i]),

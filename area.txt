@@ -1,0 +1,16 @@
+class shape:
+    pass
+class circle(shape):
+    def calculate(self,r):
+        import math
+        peri=2*math.pi*r
+        area=math.pi*r**2
+        return peri,area
+
+print("to find the perimeter and area of a circle")
+r=float(input("enter radius :"))
+import math
+peri=2*math.pi*r
+area=math.pi*r**2
+print("perimeter :",round(area,2))
+print("area :",round(peri,2))

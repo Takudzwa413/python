@@ -1,0 +1,22 @@
+class Shapes:
+    pass
+class Square(Shapes) :
+    def __init__(self, side):
+        self.side1 = side
+    def getArea1(self):
+        answer = self.side1 * self.side1
+        return answer
+side1 = int(input("please enter side of square\n"))
+objectRectangle = Square(side1)
+print("Area of a square is",objectRectangle.getArea1(),"cm2")
+
+from math import pi
+class Circle(Shapes):
+    def __init__(self, radius):
+        self.radius = radius
+    def getArea2(self):
+        answer1 = self.radius**2 * pi
+        return answer1
+radius = int(input("plese input your radius\n"))
+objectCircle = Circle(radius)
+print ("Area of cirle is",objectCircle.getArea2(),"cm2")

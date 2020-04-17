@@ -1,0 +1,18 @@
+import unittest
+from calculator import add
+
+class TestAdd(unittest.TestCase):
+    def tes_calc(self):
+        self.assertEqual(add(1,1),2,"should be 2")
+
+
+
+outcomes after running the test
+
+
+C:\Users\User\PycharmProjects\unit-test>py -m unittest test_calc.py
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
